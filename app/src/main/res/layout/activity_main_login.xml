@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainLoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:id="@+id/image_logo"
+                android:src="@drawable/guni_pink_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/cardview"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/image_logo"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="20dp"
+                    >
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edittexteamil"
+                        android:textSize="18sp"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textviewemail"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textviewemail"
+                        android:text="Email Id"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/edittexteamil"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/edittexteamil"
+                        />
+
+                    <EditText
+                        android:id="@+id/edittextpass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.428"
+                        app:layout_constraintStart_toEndOf="@+id/textviewpass"
+                        app:layout_constraintTop_toBottomOf="@+id/edittexteamil"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textviewpass"
+                        android:text="Password"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/edittexteamil"
+                        app:layout_constraintTop_toBottomOf="@+id/textviewemail"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/edittextpass"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textview_forgotpwd"
+                        android:textSize="18sp"
+                        android:text="Forgot passord"
+                        android:layout_margin="20dp"
+                        android:layout_marginTop="15dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edittextpass"
+                        app:layout_constraintHorizontal_bias="0.11"
+
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:id="@+id/btn_login"
+                        android:textColor="#ffffff"
+                        android:paddingHorizontal="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textview_forgotpwd"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sign_up_mes"
+                android:text="Do not have account"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview"
+                android:paddingVertical="20dp"
+                app:layout_constraintHorizontal_bias="0.30"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sign_up_btn"
+                android:text="SIGN UP"
+                android:textColor="#ee30ab"
+                android:backgroundTint="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/sign_up_mes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/sign_up_mes"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
